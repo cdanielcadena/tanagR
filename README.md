@@ -56,11 +56,32 @@ To use with base R
 To use with ggplot2
 
 	library(ggplot2)
-	ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Species)) + geom_point(alpha = 0.5, size  = 3) + geom_density2d() + theme_bw(base_size=12) + scale_color_tanagr(palette_name = "stilpnia_preciosa")
+	ggplot(iris, 
+		aes(x = Sepal.Length, 
+		    y = Petal.Length, 
+		    color = Species)) + 
+	geom_point(alpha = 0.5, size  = 3) + 
+	geom_density2d() + 
+	theme_bw(base_size=12) + 
+	scale_color_tanagr(palette_name = "stilpnia_preciosa")
 
-	ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length, color = Petal.Width)) + geom_point(alpha = 0.6, size  = 4) +  theme_bw(base_size=12) + scale_color_tanagr(palette_name = "chlorochrysa_nitidissima", discrete = FALSE)
+	ggplot(iris, 
+		aes(x = Sepal.Width, 
+		    y = Sepal.Length, 
+		    color = Petal.Width)) + 
+	geom_point(alpha = 0.6, size  = 4) +  
+	theme_bw(base_size=12) + 
+	scale_color_tanagr(palette_name = "chlorochrysa_nitidissima", 
+	                   discrete = FALSE)
 
-	ggplot(mpg, aes(manufacturer, fill = manufacturer)) + geom_bar() + theme(axis.text.x = element_text(angle = 45, hjust = 1), panel.background = element_blank()) + scale_fill_tanagr(palette = "stilpnia_preciosa", guide = "none")
+	ggplot(mpg, 
+		aes(manufacturer, 
+		    fill = manufacturer)) + 
+	geom_bar() + 
+	theme(axis.text.x = element_text(angle = 45, hjust = 1), 
+	      panel.background = element_blank()) + 
+	scale_fill_tanagr(palette = "stilpnia_preciosa", 
+	                  guide = "none")
 
 
 ## Issues
