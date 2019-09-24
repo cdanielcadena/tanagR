@@ -26,7 +26,7 @@ The typical pipeline for using `tanagR` involves 3 steps:
 
 ## Visualize available palettes
 
-Load `tanagR` and visualize palettes
+Load `tanagR` and list available palettes
 
 
 	library(tanagR)
