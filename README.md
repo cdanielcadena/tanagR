@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Sexual selection and natural selection have produced the most beautiful color palettes in the plumage of birdsover millions of years of evolution - so why reinvent the (color) wheel? `tanagR` is an R package to generate color palettes for graphs inspired by the plumage of passerine birds in the tanager family (Thraupidae).
+Sexual selection and natural selection have produced the most beautiful color palettes in the plumage of birds over millions of years of evolution - so why reinvent the (color) wheel? `tanagR` is an R package to generate color palettes for graphs inspired by the plumage of passerine birds in the tanager family (Thraupidae).
 
 ![](images_gh/tanagR.jpeg)
 
