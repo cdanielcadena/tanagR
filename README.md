@@ -38,7 +38,7 @@ Visualize one of the palettes:
 
 	viz_palette("bangsia_edwardsi")
 
-## Use a color palette
+## Select and use a color palette
 
 To use with base R
 
