@@ -86,7 +86,7 @@ To use with ggplot2
 
 ## Issues
 
-Please use the [issue tracker]() to file issues.
+Please use the [issue tracker](https://github.com/cdanielcadena/tanagR/issues) to file issues.
 
 ## Plans for the future
 
@@ -97,4 +97,4 @@ Please use the [issue tracker]() to file issues.
 ## Credits
 
 Thanks to [Karthik Ram](https://github.com/karthik) for releasing his `wesanderson` library under MIT license.
-All photographs used to generate palettes were obtained from The Macaulay Library at the Cornell Lab of Ornithology.
+All photographs used to generate palettes were obtained from [The Macaulay Library at the Cornell Lab of Ornithology.](https://www.macaulaylibrary.org)
