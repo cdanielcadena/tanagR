@@ -1,0 +1,799 @@
+#' Tanager-Inspired Color Palettes#
+#'#
+#' A collection of color palettes inspired by the plumage of tanagers#
+#'#
+#' All images from https://www.macaulaylibrary.org/#
+#' For each species, the catalog number in the Macaulay Library is provided#
+#'#
+#' @examples#
+#' names(tanagr_palettes)#
+#'#
+#' @export#
+#
+tanagr_palettes = list(#
+#
+  ## Bangsia edwardsi: ML105242121#
+  bangsia_edwardsi = c(#
+  "#47537D",#
+  "#F6C81B",#
+  "#384726",#
+  "#22394B",#
+  "#C66A15"),#
+#
+  ## Buthraupis montana: ML119160981#
+  buthraupis_montana = c(#
+  "#E53A33",#
+  "#162A6F",#
+  "#5B6799",#
+  "#F6DA0D",#
+  "#050608"),#
+#
+  ## Chlorochrysa nitidissima: ML147550291#
+  chlorochrysa_nitidissima = c(#
+  "#D4940E",#
+  "#8B5B06",#
+  "#0C0C0C",#
+  "#004D6B",#
+  "#015718",#
+  "#F1ED7F"),#
+#
+  ## Chlorornis_riefferi: ML61615651#
+  chlorornis_riefferi = c(#
+  "#46A43F",#
+  "#A73601",#
+  "#E33305"),#
+#
+  ## Chrysothlypis salmoni: ML69813881#
+  chrysothlypis_salmoni = c(#
+  "#C32029",#
+  "#DDD6DC",#
+  "#371200"),#
+#
+  ## Cyanerpes cyaneus: ML 133295541#
+  cyanerpes_cyaneus = c(#
+  "#ADFDFE",#
+  "#EA456D",#
+  "#4647DF",#
+  "#010E1E"),#
+#
+  ## Dacnis berlepschi: ML87354401#
+  dacnis_berlepschi = c(#
+  "#111822",#
+  "#236AA0",#
+  "#BD6400",#
+  "#970301",#
+  "#F3EB1C"),#
+#
+  ## Diglossa gloriosissima: ML96454781#
+  diglossa_gloriosissima = c(#
+  "#C46C1B",#
+  "#A1C8E4",#
+  "#353C46",#
+  "#322C2B"),#
+#
+  ## Iridosornis jelskii: ML77351401#
+  iridosornis_jelskii = c(#
+  "#D5AD1A",#
+  "#754B3B",#
+  "#3D51AA",#
+  "#48587A",#
+  "#121318"),#
+#
+  ## Ramphocelus sanguinolentus: ML123956371#
+  ramphocelus_sanguinolentus =c(#
+  "#D6292F",#
+  "#0F1927",#
+  "#EEF3FC",#
+  "#AEC7E0",#
+  "#3A170E"),#
+#
+  ## Stephanophorus diadematus: ML176952861#
+  stephanophorus_diadematus = c(#
+  "#FEFEFC",#
+  "#111113",#
+  "#537AD9",#
+  "#242D58",#
+  "#B0342C"),#
+#
+  ## Stilpnia preciosa: ML102753671#
+  stilpnia_preciosa = c(#
+  "#F6AD4F",#
+  "#A45336",#
+  "#E6E8DB",#
+  "#6CB9A9",#
+  "#49A5D6",#
+  "#000A1A"),#
+#
+  ## Tangara chilensis: ML32334281#
+  tangara_chilensis = c(#
+  "#E93924",#
+  "#020104",#
+  "#4BD0F1",#
+  "#2A4F9F",#
+  "#ACD000"),#
+#
+  ## Tangara parzudakii: ML68583061#
+  tangara_parzudakii = c(#
+  "#FC9D0D",#
+  "#282536",#
+  "#DCF9F7",#
+  "#51280C",#
+  "#C4E1FF",#
+  "#EADA2D"),#
+#
+  ## Tangara seledon: ML100525451#
+  tangara_seledon = c(#
+  "#F5EF1D",#
+  "#73DBDA",#
+  "#302F35",#
+  "#345896",#
+  "#4D820C"),#
+#
+  ## Tangara velia: ML127986001#
+  tangara_velia = c(#
+  "#003BB4",#
+  "#0E0D1B",#
+  "#E5CDB1",#
+  "#2B7485",#
+  "#643404")#
+  )
+tanagr_pal <- function(palette_name, n, discrete = TRUE) {#
+    pal <- tanagr_palettes[[palette_name]]#
+#
+    if (missing(n)) {#
+    	n <- length(pal)#
+  }#
+  	if (discrete == "TRUE" && n > length(pal)) {#
+    stop("Number of requested colors greater than number of discrete colors in palette. Please visualize palette using viz_palette(\"palette_name\") to check number of colors available")#
+  }#
+    if (discrete) {#
+    	return(pal[1:n])#
+  } else {#
+    	return(colorRampPalette(pal)(n))#
+  }#
+}
+scale_color_tanagr <- function(palette_name, discrete = TRUE, ...) {#
+  if (discrete) {#
+    discrete_scale(aesthetics = "color", #
+    			   scale_name = paste0("tanagr_", palette_name), #
+    			   palette = tanagr_pal(palette_name), ...)#
+  } else {#
+    scale_color_gradientn(..., #
+    					  colors = tanagr_pal(palette_name),#
+    					  aesthetics = "color")#
+  }#
+}
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +#
+    geom_point(size = 4) +#
+    scale_color_tanagr("tangara_velia")
+library(ggplot2)
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +#
+    geom_point(size = 4) +#
+    scale_color_tanagr("tangara_velia")
+palette_name = "tangara_velia"
+pal <- tanagr_palettes[[palette_name]]
+pal
+pal[1:n]
+pal
+tanagr_palette <- function(palette_name, n, discrete = TRUE) {#
+    pal <- tanagr_palettes[[palette_name]]#
+#
+    if (missing(n)) {#
+    	n <- length(pal)#
+  }#
+  	if (discrete == "TRUE" && n > length(pal)) {#
+    stop("Number of requested colors greater than number of discrete colors in palette. Please visualize palette using viz_palette(\"palette_name\") to check number of colors available")#
+  }#
+    if (discrete) {#
+    	return(pal[1:n])#
+  } else {#
+    	return(colorRampPalette(pal)(n))#
+  }#
+}
+tanagr_palette("tangara_velia")
+tanagr_palette("tangara_velia", 3)
+tanagr_palette("tangara_velia", 6)
+tanagr_palette("tangara_velia", discrete= FALSE)
+tanagr_palette("tangara_velia", 10, discrete= FALSE)
+tanagr_palette <- function(palette_name, n, discrete = TRUE) {#
+    pal <- tanagr_palettes[[palette_name]]#
+#
+    if (missing(n)) {#
+    	n <- length(pal)#
+  }#
+  	if (discrete == "TRUE" && n > length(pal)) {#
+    stop("Number of requested colors greater than number of discrete colors in palette. Please visualize palette using viz_palette(\"palette_name\") to check number of colors available")#
+  }#
+    if (discrete) {#
+    	return(pal[1:n])#
+  } else {#
+    	return(colorRampPalette(pal))#
+  }#
+}
+tanagr_palette("tangara_velia", 10, discrete= FALSE)
+tanagr_palette("tangara_velia", discrete= FALSE)
+tanagr_palette("tangara_velia", 6)
+tanagr_palette("tangara_velia", 4)
+tanagr_palette <- function(palette_name, n, discrete = TRUE) {#
+    pal <- tanagr_palettes[[palette_name]]#
+#
+    if (missing(n)) {#
+    	n <- length(pal)#
+  }#
+  	if (discrete == "TRUE" && n > length(pal)) {#
+    stop("Number of requested colors greater than number of discrete colors in palette. Please visualize palette using viz_palette(\"palette_name\") to check number of colors available")#
+  }#
+    if (discrete) {#
+    	return(pal[1:n])#
+  } else {#
+    	return(colorRampPalette(pal)(n))#
+  }#
+}
+tanagr_palette("tangara_velia", 10, discrete= FALSE)
+tanagr_palette("tangara_velia", 100, discrete= FALSE)
+tanagr_pal <- function(palette_name) {#
+    pal <- tanagr_palettes[[palette_name]]#
+    return(colorRampPalette(pal))#
+}
+scale_color_tanagr <- function(palette_name, discrete = TRUE, ...) {#
+  if (discrete) {#
+    discrete_scale(aesthetics = "color", #
+    			   scale_name = paste0("tanagr_", palette_name), #
+    			   palette = tanagr_pal(palette_name), ...)#
+  } else {#
+    scale_color_gradientn(..., #
+    					  colors = tanagr_pal(palette_name),#
+    					  aesthetics = "color")#
+  }#
+}
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +#
+    geom_point(size = 4) +#
+    scale_color_tanagr("tangara_velia")
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +#
+    geom_point(size = 4) +#
+    scale_color_tanagr("tangara_velia", 2)
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +#
+    geom_point(size = 4) +#
+    scale_color_tanagr("tangara_velia", discrete = FALSE)
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +#
+    geom_point(size = 4) +#
+    scale_color_tanagr("tangara_velia", 6)
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +#
+    geom_point(size = 4) +#
+    scale_color_tanagr("tangara_velia", 9)
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Sepal.Length)) +#
+    geom_point(size = 4, alpha = .6) +#
+    scale_color_tanagr(discrete = FALSE, palette = "tangara_velia")
+tanagr_pal <- function(palette_name) {#
+    pal <- tanagr_palettes[[palette_name]]#
+    return(colorRampPalette(pal))#
+}#
+#
+scale_color_tanagr <- function(palette_name, discrete = TRUE, ...) {#
+  if (discrete) {#
+    discrete_scale(aesthetics = "color", #
+    			   scale_name = paste0("tanagr_", palette_name), #
+    			   palette = tanagr_pal(palette_name), ...)#
+  } else {#
+    scale_color_gradientn(..., #
+    					  colors = tanagr_pal(palette_name)(256),#
+    					  aesthetics = "color")#
+  }#
+}
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Sepal.Length)) +#
+    geom_point(size = 4, alpha = .6) +#
+    scale_color_tanagr(discrete = FALSE, palette = "tangara_velia")
+tanagr_pal <- function(palette_name, n) {#
+#
+    pal <- tanagr_palettes[[palette_name]]#
+    if (missing(n)) {#
+    	n <- length(pal)#
+  }#
+    return(colorRampPalette(pal)(n))#
+}
+scale_color_tanagr <- function(palette_name, n, discrete = TRUE, ...) {#
+  if (discrete) {#
+    discrete_scale(aesthetics = "color", #
+    			   scale_name = paste0("tanagr_", palette_name), #
+    			   palette = tanagr_pal(palette_name), ...)#
+  } else {#
+    scale_color_gradientn(..., #
+    					  colors = tanagr_pal(palette_name)(256),#
+    					  aesthetics = "color")#
+  }#
+}
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Sepal.Length)) +#
+    geom_point(size = 4, alpha = .6) +#
+    scale_color_tanagr(discrete = FALSE, palette = "tangara_velia", 10)
+scale_color_tanagr <- function(palette_name, n, discrete = TRUE, ...) {#
+  if (discrete) {#
+    discrete_scale(aesthetics = "color", #
+    			   scale_name = paste0("tanagr_", palette_name), #
+    			   palette = tanagr_pal(palette_name), ...)#
+  } else {#
+    scale_color_gradientn(..., #
+    					  colors = tanagr_pal(palette_name)(n),#
+    					  aesthetics = "color")#
+  }#
+}
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Sepal.Length)) +#
+    geom_point(size = 4, alpha = .6) +#
+    scale_color_tanagr(discrete = FALSE, palette = "tangara_velia", 10)
+scale_color_tanagr <- function(palette_name, n, discrete = TRUE, ...) {#
+  if (discrete) {#
+    discrete_scale(aesthetics = "color", #
+    			   scale_name = paste0("tanagr_", palette_name), #
+    			   palette = tanagr_pal(palette_name), ...)#
+  } else {#
+    scale_color_gradientn(..., #
+    					  colors = tanagr_pal(palette_name, n),#
+    					  aesthetics = "color")#
+  }#
+}
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Sepal.Length)) +#
+    geom_point(size = 4, alpha = .6) +#
+    scale_color_tanagr(discrete = FALSE, palette = "tangara_velia", 10)
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Sepal.Length)) +#
+    geom_point(size = 4, alpha = .6) +#
+    scale_color_tanagr(discrete = FALSE, palette = "tangara_velia", 5)
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Sepal.Length)) +#
+    geom_point(size = 4, alpha = .6) +#
+    scale_color_tanagr(discrete = FALSE, palette = "tangara_velia", 100)
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Sepal.Length)) +#
+    geom_point(size = 4, alpha = .6) +#
+    scale_color_tanagr(discrete = FALSE, palette = "chrysothlypis_salmoni", 100)
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Sepal.Length)) +#
+    geom_point(size = 4, alpha = .6) +#
+    scale_color_tanagr(discrete = FALSE, palette = "chrysothlypis_salmoni", 3)
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +#
+    geom_point(size = 4) +#
+    scale_color_tanagr("tangara_velia", 9)
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +#
+    geom_point(size = 4) +#
+    scale_color_tanagr("tangara_velia")
+#' Tanager-Inspired Color Palettes#
+#'#
+#' A collection of color palettes inspired by the plumage of tanagers#
+#'#
+#' All images from https://www.macaulaylibrary.org/#
+#' For each species, the catalog number in the Macaulay Library is provided#
+#'#
+#' @examples#
+#' names(tanagr_palettes)#
+#'#
+#' @export#
+#
+tanagr_palettes = list(#
+#
+  ## Bangsia edwardsi: ML105242121#
+  bangsia_edwardsi = c(#
+  "#47537D",#
+  "#F6C81B",#
+  "#384726",#
+  "#22394B",#
+  "#C66A15"),#
+#
+  ## Buthraupis montana: ML119160981#
+  buthraupis_montana = c(#
+  "#E53A33",#
+  "#162A6F",#
+  "#5B6799",#
+  "#F6DA0D",#
+  "#050608"),#
+#
+  ## Chlorochrysa nitidissima: ML147550291#
+  chlorochrysa_nitidissima = c(#
+  "#D4940E",#
+  "#8B5B06",#
+  "#0C0C0C",#
+  "#004D6B",#
+  "#015718",#
+  "#F1ED7F"),#
+#
+  ## Chlorornis_riefferi: ML61615651#
+  chlorornis_riefferi = c(#
+  "#46A43F",#
+  "#A73601",#
+  "#E33305"),#
+#
+  ## Chrysothlypis salmoni: ML69813881#
+  chrysothlypis_salmoni = c(#
+  "#C32029",#
+  "#DDD6DC",#
+  "#371200"),#
+#
+  ## Cyanerpes cyaneus: ML 133295541#
+  cyanerpes_cyaneus = c(#
+  "#ADFDFE",#
+  "#EA456D",#
+  "#4647DF",#
+  "#010E1E"),#
+#
+  ## Dacnis berlepschi: ML87354401#
+  dacnis_berlepschi = c(#
+  "#111822",#
+  "#236AA0",#
+  "#BD6400",#
+  "#970301",#
+  "#F3EB1C"),#
+#
+  ## Diglossa gloriosissima: ML96454781#
+  diglossa_gloriosissima = c(#
+  "#C46C1B",#
+  "#A1C8E4",#
+  "#353C46",#
+  "#322C2B"),#
+#
+  ## Iridosornis jelskii: ML77351401#
+  iridosornis_jelskii = c(#
+  "#D5AD1A",#
+  "#754B3B",#
+  "#3D51AA",#
+  "#48587A",#
+  "#121318"),#
+#
+  ## Ramphocelus sanguinolentus: ML123956371#
+  ramphocelus_sanguinolentus =c(#
+  "#D6292F",#
+  "#0F1927",#
+  "#EEF3FC",#
+  "#AEC7E0",#
+  "#3A170E"),#
+#
+  ## Stephanophorus diadematus: ML176952861#
+  stephanophorus_diadematus = c(#
+  "#FEFEFC",#
+  "#111113",#
+  "#537AD9",#
+  "#242D58",#
+  "#B0342C"),#
+#
+  ## Stilpnia preciosa: ML102753671#
+  stilpnia_preciosa = c(#
+  "#F6AD4F",#
+  "#A45336",#
+  "#E6E8DB",#
+  "#6CB9A9",#
+  "#49A5D6",#
+  "#000A1A"),#
+#
+  ## Tangara chilensis: ML32334281#
+  tangara_chilensis = c(#
+  "#E93924",#
+  "#020104",#
+  "#4BD0F1",#
+  "#2A4F9F",#
+  "#ACD000"),#
+#
+  ## Tangara parzudakii: ML68583061#
+  tangara_parzudakii = c(#
+  "#FC9D0D",#
+  "#282536",#
+  "#DCF9F7",#
+  "#51280C",#
+  "#C4E1FF",#
+  "#EADA2D"),#
+#
+  ## Tangara seledon: ML100525451#
+  tangara_seledon = c(#
+  "#F5EF1D",#
+  "#73DBDA",#
+  "#302F35",#
+  "#345896",#
+  "#4D820C"),#
+#
+  ## Tangara velia: ML127986001#
+  tangara_velia = c(#
+  "#003BB4",#
+  "#0E0D1B",#
+  "#E5CDB1",#
+  "#2B7485",#
+  "#643404")#
+  )
+library(ggplot2)
+tanagr_palette <- function(palette_name, n, discrete = TRUE) {#
+    pal <- tanagr_palettes[[palette_name]]#
+#
+    if (missing(n)) {#
+    	n <- length(pal)#
+  }#
+  	if (discrete == "TRUE" && n > length(pal)) {#
+    stop("Number of requested colors greater than number of discrete colors in palette. Please visualize palette using viz_palette(\"palette_name\") to check number of colors available")#
+  }#
+    if (discrete) {#
+    	return(pal[1:n])#
+  } else {#
+    	return(colorRampPalette(pal)(n))#
+  }#
+}
+pal = tanagr_palette("bangsia_edwardsi")#
+data(iris)plot(iris$Sepal.Width,#
+#'      iris$Sepal.Length,#
+#'      col = pal[as.numeric(iris$Species)],#
+#'      pch = 19)
+pal = tanagr_palette("bangsia_edwardsi")#
+data(iris)#
+plot(iris$Sepal.Width,#
+     iris$Sepal.Length,#
+      col = pal[as.numeric(iris$Species)],#
+      pch = 19)
+pal = tanagr_palette("dacnis_berlepschi", discrete = FALSE)#
+ data(volcano)#
+ image(volcano,#
+       col = pal,#
+       main = "Colors: Dacnis berlepschi")
+pal = tanagr_palette("dacnis_berlepschi", discrete = FALSE, n = 250)#
+ data(volcano)#
+ image(volcano,#
+       col = pal,#
+       main = "Colors: Dacnis berlepschi")
+tanagr_pal <- function(palette_name) {#
+    pal <- tanagr_palettes[[palette_name]]#
+    return(colorRampPalette(pal))#
+}#
+#
+scale_color_tanagr <- function(palette_name, discrete = TRUE, ...) {#
+  if (discrete) {#
+    discrete_scale(aesthetics = "color", #
+    			   scale_name = paste0("tanagr_", palette_name), #
+    			   palette = tanagr_pal(palette_name), ...)#
+  } else {#
+    scale_color_gradientn(..., #
+    					  colors = tanagr_pal(palette_name)(256),#
+    					  aesthetics = "color")#
+  }#
+}
+ggplot(iris, aes(x=Sepal.Length, y=Petal.Length, color=Species)) + geom_point() + geom_density2d()+ scale_color_tanagr("dacnis_berlepschi")
+sitka <- read.csv("http://wilkelab.org/classes/SDS348/data_sets/sitka.csv")
+head(sitka)
+ggplot(sitka, aes(x=Time, y=size, color=factor(tree), group=tree)) + geom_line() + facet_wrap(~treat) + scale_color_tanagr("dacnis_berlepschi")
+tanagr_pal <- function(palette_name) {#
+    pal <- tanagr_palettes[[palette_name]]#
+    return(colorRampPalette(pal))#
+}
+tanagr_pal("dacnis_berlepschi")
+tanagr_pal("dacnis_berlepschi")(1)
+tanagr_pal("dacnis_berlepschi")(10)
+#' Vizualization of palettes#
+#'#
+#' Visualize a single palette from the list of available palettes#
+#' To see list of available palettes use names(tanagr_palettes)#
+#'#
+#' @param palette_name the name of the palette#
+#'#
+#' @examples#
+#' viz_palette("bangsia_edwardsi")#
+#' viz_palette("tangara_velia")#
+#'#
+#' @export#
+#' @importFrom graphics rect par image text#
+#' @importFrom grDevices rgb#
+#
+viz_palette <- function(palette_name) {#
+#
+  pal <- tanagr_palettes[[palette_name]]#
+#
+  if (is.null(pal))#
+    stop("Palette not found.")#
+#
+  n <- length(pal)#
+#
+  # save the old values of mar, and reset when done (see Hadley's#
+  # book on writing R packages)#
+  old <- par(mar = c(1, 1, 1, 1))#
+  on.exit(par(old))#
+#
+  image(x = 1:n,#
+        y = 1,#
+        z = as.matrix(1:n),#
+        col = pal,#
+        ylab = "",#
+        xaxt = "n",#
+        yaxt = "n",#
+        bty = "n")#,#
+  #main = paste0(name, " (", length(pal), " colors in palette)"))#
+#
+  rect(xleft = 0,#
+       ybottom = 0.9,#
+       xright = n + 1,#
+       ytop = 1.1,#
+       col = rgb(1, 1, 1, 0.6),#
+       border = NA)#
+#
+  text(x = (n + 1) / 2,#
+       y = 1,#
+       labels = paste(palette_name),#
+       cex = 2,#
+       family = "Helvetica")#
+}
+viz_palette("dacnis_berlepschi")
+viz_palette("chlorornis_riefferi")
+ggplot(iris, aes(x=Sepal.Length, y=Petal.Length, color=Species)) + geom_point() + geom_density2d()+ scale_color_tanagr("chlorornis_riefferi")
+ggplot(sitka, aes(x=Time, y=size, color=factor(tree), group=tree)) + geom_line() + facet_wrap(~treat) + scale_color_tanagr("chlorornis_riefferi")
+tanagr_palette <- function(palette_name, n, discrete = TRUE) {#
+    pal <- tanagr_palettes[[palette_name]]#
+#
+    if (missing(n)) {#
+    	n <- length(pal)#
+  }#
+  	if (discrete == "TRUE" && n > length(pal)) {#
+    stop("Number of requested colors greater than number of discrete colors in palette. Please visualize palette using viz_palette(\"palette_name\") to check number of available colors in palette.")#
+  }#
+    if (discrete) {#
+    	return(pal[1:n])#
+  } else {#
+    	return(colorRampPalette(pal)(n))#
+  }#
+}
+pal = tanagr_palette("dacnis_berlepschi", 20, discrete = FALSE)
+data(volcano)
+image(volcano, col = pal)
+pal = tanagr_palette("dacnis_berlepschi", 10, discrete = FALSE)
+image(volcano, col = pal)
+pal = tanagr_palette("dacnis_berlepschi", 100, discrete = FALSE)
+image(volcano, col = pal)
+tanagr_palette <- function(palette_name, n, discrete = TRUE) {#
+    pal <- tanagr_palettes[[palette_name]]#
+#
+    if (missing(n)) {#
+    	n <- length(pal)#
+  }#
+  	if (discrete == "TRUE" && n > length(pal)) {#
+    stop("Number of requested colors greater than number of discrete colors in palette. Please visualize palette using viz_palette(\"palette_name\") to check number of available colors in palette.")#
+  }#
+    if (discrete) {#
+    	return(pal[1:n])#
+  } else {#
+    	return(colorRampPalette(pal)(n))#
+  }#
+}
+pal = tanagr_palette("dacnis_berlepschi", 300, discrete = FALSE)
+image(volcano, col = pal)
+pal = tanagr_palette("dacnis_berlepschi", 400, discrete = FALSE)
+image(volcano, col = pal)
+pal = tanagr_palette("dacnis_berlepschi", 250, discrete = FALSE)
+image(volcano, col = pal)
+tanagr_pal <- function(palette_name) {#
+  pal <- tanagr_palettes[[palette_name]]#
+  return(colorRampPalette(pal))#
+}
+tanagr_pal("buthraupis_montana")
+tanagr_pal("buthraupis_montana")(10)
+tanagr_pal("buthraupis_montana")(100)
+scale_color_tanagr <- function(palette_name, discrete = TRUE, ...) {#
+  if (discrete) {#
+    discrete_scale(aesthetics = "color",#
+                   scale_name = paste0("tanagr_", palette_name),#
+                   palette = tanagr_pal(palette_name), ...)#
+  } else {#
+    scale_color_gradientn(...,#
+                          colors = tanagr_pal(palette_name)(256),#
+                          aesthetics = "color")#
+  }#
+}
+ggplot(iris,#
+        aes(x = Sepal.Length,#
+            y = Petal.Length,#
+            color = Species)) +#
+        geom_point() +#
+        geom_density2d() +#
+        scale_color_tanagr("chrysothlypis_salmoni")
+ggplot(iris,#
+        aes(x = Sepal.Length,#
+            y = Petal.Length,#
+            color = Species)) +#
+        geom_point() +#
+        geom_density2d() +#
+        scale_color_tanagr("chrysothlypis_salmoni")+theme_bw(base_size=12)
+ggplot(iris,#
+        aes(x = Sepal.Length,#
+            y = Petal.Length,#
+            color = Species)) +#
+        geom_point() +#
+        geom_density2d() +#
+        scale_color_tanagr("cyanerpes_cyaneus")+theme_bw(base_size=12)
+ggplot(iris,#
+        aes(x = Sepal.Length,#
+            y = Petal.Length,#
+            color = Species)) +#
+        geom_point() +#
+        geom_density2d() +#
+        scale_color_tanagr("chrysothlypis_salmoni")+theme_bw(base_size=12)
+ggplot(iris,#
+        aes(x = Sepal.Length,#
+            y = Petal.Length,#
+            color = Species)) +#
+        geom_point() +#
+        geom_density2d() +#
+        scale_color_tanagr("chlorornis_riefferi")+theme_bw(base_size=12)
+ggplot(iris,#
+        aes(x = Sepal.Length,#
+            y = Petal.Length,#
+            color = Species)) +#
+        geom_point() +#
+        geom_density2d() +#
+        scale_color_tanagr("dacnis_berlepschi")+theme_bw(base_size=12)
+ggplot(iris,#
+        aes(x = Sepal.Length,#
+            y = Petal.Length,#
+            color = Species)) +#
+        geom_point() +#
+        geom_density2d() +#
+        scale_color_tanagr("diglossa_gloriosissima")+theme_bw(base_size=12)
+ggplot(iris,#
+        aes(x = Sepal.Length,#
+            y = Petal.Length,#
+            color = Species)) +#
+        geom_point() +#
+        geom_density2d() +#
+        scale_color_tanagr("iridosornis_jelskii")+theme_bw(base_size=12)
+ggplot(iris,#
+        aes(x = Sepal.Length,#
+            y = Petal.Length,#
+            color = Species)) +#
+        geom_point() +#
+        geom_density2d() +#
+        scale_color_tanagr("ramphocelus_sanguinolentus")+theme_bw(base_size=12)
+ggplot(iris,#
+        aes(x = Sepal.Length,#
+            y = Petal.Length,#
+            color = Species)) +#
+        geom_point() +#
+        geom_density2d() +#
+        scale_color_tanagr("stephanophorus_diadematus")+theme_bw(base_size=12)
+ggplot(iris,#
+        aes(x = Sepal.Length,#
+            y = Petal.Length,#
+            color = Species)) +#
+        geom_point() +#
+        geom_density2d() +#
+        scale_color_tanagr("stilpnia_preciosa")+theme_bw(base_size=12)
+ggplot(iris,#
+        aes(x = Sepal.Length,#
+            y = Petal.Length,#
+            color = Species)) +#
+        geom_point(alpha = 0.7) +#
+        geom_density2d() +#
+        scale_color_tanagr("stilpnia_preciosa")+theme_bw(base_size=12)
+ggplot(iris,#
+        aes(x = Sepal.Length,#
+            y = Petal.Length,#
+            color = Species)) +#
+        geom_point(alpha = 0.3) +#
+        geom_density2d() +#
+        scale_color_tanagr("stilpnia_preciosa")+theme_bw(base_size=12)
+ggplot(iris,#
+        aes(x = Sepal.Length,#
+            y = Petal.Length,#
+            color = Species)) +#
+        geom_point(alpha = 0.5, size  = 2) +#
+        geom_density2d() +#
+        scale_color_tanagr("stilpnia_preciosa")+theme_bw(base_size=12)
+ggplot(iris,#
+        aes(x = Sepal.Length,#
+            y = Petal.Length,#
+            color = Species)) +#
+        geom_point(alpha = 0.5, size  = 3) +#
+        geom_density2d() +#
+        scale_color_tanagr("stilpnia_preciosa")+theme_bw(base_size=12)
+head(diamonds)
+ggplot(diamonds, aes(x = cut_number(carat, 5), y = price, colour = cut)) +#
+  geom_boxplot()
+ggplot(diamonds, aes(colour = cut_number(carat, 5), y = price, x = cut)) +#
+  geom_boxplot()
+x <- y <- seq(-8*pi, 8*pi, len = 40)#
+r <- sqrt(outer(x^2, y^2, "+"))#
+filled.contour(cos(r^2)*exp(-r/(2*pi)), #
+               axes=FALSE,#
+               asp=1)
+head(irid)
+head(iris)
+ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Sepal.Width))) + geom_point(size  = 3) +  theme_bw(base_size=12) + scale_color_tanagr(palette_name = "tangara_velia", discrete = FALSE)
+ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Sepal.Width)) + geom_point(size  = 3) +  theme_bw(base_size=12) + scale_color_tanagr(palette_name = "tangara_velia", discrete = FALSE)
+ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Sepal.Width)) + geom_point(size  = 3) +  theme_bw(base_size=12) + scale_color_tanagr(palette_name = "tangara_seledon", discrete = FALSE)
+ggplot(diamonds, aes(x=carat, y=price, color=depth)) + geom_point() + scale_color_tanagr(palette_name = "tangara_seledon", discrete = FALSE)
+ggplot(diamonds, aes(x=carat, y=price, color=table)) + geom_point() + scale_color_tanagr(palette_name = "chlorornis_riefferi", discrete = FALSE)
+ggplot(diamonds, aes(x=carat, y=price, color=clarity)) + geom_point() + scale_color_tanagr(palette_name = "diglossa_gloriosissima")
+ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Sepal.Width)) + geom_point(size  = 4) +  theme_bw(base_size=12) + scale_color_tanagr(palette_name = "tangara_velia", discrete = FALSE)
+ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Sepal.Width)) + geom_point(size  = 4) +  theme_bw(base_size=12) + scale_color_tanagr(palette_name = "chlorornis_riefferi", discrete = FALSE)
+ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Sepal.Width)) + geom_point(alpha = 0.6, size  = 4) +  theme_bw(base_size=12) + scale_color_tanagr(palette_name = "chlorornis_riefferi", discrete = FALSE)

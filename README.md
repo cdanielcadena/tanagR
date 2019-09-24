@@ -78,4 +78,3 @@ Please use the [issue tracker]() to file issues.
 
 Thanks to [Karthik Ram](https://github.com/karthik) for releasing his `wesanderson` library under MIT license.
 All photographs used to generate palettes were obtained from The Macaulay Library at the Cornell Lab of Ornithology.
-
