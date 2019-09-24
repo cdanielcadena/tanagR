@@ -21,7 +21,7 @@ Sexual selection and natural selection have produced the most beautiful color pa
 The typical pipeline for using `tanagR` involves 3 steps:
 
 1. Visualize color palettes to choose the one that fits your needs
-2. Select a color palette from the available palettes
+2. Select a color palette
 3. Use the selected color palette to construct `base R`-style plots or `ggplot2`-style plots
 
 ## Visualize available palettes
