@@ -1,4 +1,4 @@
-#' Vizualization of palettes
+#' Visualization of palettes
 #'
 #' Visualize a single palette from the list of available palettes
 #' To see list of available palettes use names(tanagr_palettes)
@@ -49,4 +49,33 @@ viz_palette <- function(palette_name) {
        labels = paste(palette_name),
        cex = 2,
        family = "Helvetica")
+}
+
+
+#' Visualization of palettes with birds
+#'
+#' Visualize a single palette from the list of available palettes with the birds
+#' To see list of available palettes use names(tanagr_palettes)
+#'
+#' @param palette_name the name of the palette
+#'
+#' @examples
+#' visualize_palette("bangsia_edwardsi")
+#' visualize_palette("tangara_velia")
+#'
+#' @export
+#' @import magick
+#' @importFrom graphics plot
+
+visualize_palette <- function(palette_name){
+  path_to_pal = print(paste0("palettes/", palette_name, ".jpg"))
+
+  pal = magick::image_read(system.file(path_to_pal, package = "tanagR"))
+
+  # save the old values of mar, and reset when done (see Hadley's
+  # book on writing R packages)
+  old <- par(mar = c(1, 1, 1, 1))
+  on.exit(par(old))
+
+  plot(pal, axes = F, ann = F)
 }
