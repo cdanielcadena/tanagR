@@ -37,8 +37,8 @@ tanagr_palettes = list(
   "#015718",
   "#F1ED7F"),
 
-  ## Chlorornis_riefferi: ML61615651
-  chlorornis_riefferi = c(
+  ## Chlorornis_riefferii: ML61615651
+  chlorornis_riefferii = c(
   "#46A43F",
   "#A73601",
   "#E33305"),
