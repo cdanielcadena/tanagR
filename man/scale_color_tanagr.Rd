@@ -7,19 +7,26 @@
 scale_color_tanagr(palette_name, discrete = TRUE, ...)
 }
 \arguments{
+\item{palette_name}{the name of the palette}
+
 \item{discrete}{whether to use a discrete or continuous color palette (boolean)}
 
 \item{...}{additional arguments to pass to scale_color_gradientn}
-
-\item{palette}{the name of the palette}
 }
 \description{
 It generates a palette by linear interpolation for scale_color
 }
 \examples{
 library(ggplot2)
-ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Species)) + geom_point(alpha = 0.5, size  = 3) + geom_density2d() + theme_bw(base_size=12) + scale_color_tanagr(palette_name = "stilpnia_preciosa")
+ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Species)) +
+ geom_point(size  = 3) +
+ geom_density2d() +
+ theme_bw(base_size=12) +
+ scale_color_tanagr(palette_name = "stilpnia_preciosa")
 
-ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length, color = Petal.Width)) + geom_point(alpha = 0.6, size  = 4) +  theme_bw(base_size=12) + scale_color_tanagr(palette_name = "chlorochrysa_nitidissima", discrete = FALSE)
+ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length, color = Petal.Width)) +
+ geom_point(size  = 4) +
+ theme_bw(base_size=12) +
+ scale_color_tanagr(palette_name = "chlorochrysa_nitidissima", discrete = FALSE)
 
 }
