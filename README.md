@@ -10,10 +10,20 @@ Sexual selection and natural selection have produced the most beautiful color pa
 
 ## Installation
 
-`tanagR` is currently available only through GitHub. We hope to make it available via [CRAN](https://cran.r-project.org/web/packages/available_packages_by_name.html) soon. To install `tanagR` via GitHub, you will need `devtools`
+`tanagR` is currently available only through GitHub. We will make it available via [CRAN](https://cran.r-project.org/web/packages/available_packages_by_name.html) soon. To install `tanagR` via GitHub, you will need `devtools`
 
 
 	install.packages("devtools")
+	
+If you have problems installing `devtools` please visit the `devtools` [website](https://www.r-project.org/nosvn/pandoc/devtools.html) (you may need developer tools specific to you OS). We used the `v 2.2.1` to build `tanagR`.
+
+Once you have installed `devtools` you can load it and install `tanagR`.
+	
+	library(devtools)
+	install_github("cdanielcadena/tanagR")
+
+or
+
 	devtools::install_github("cdanielcadena/tanagR")
 
 ## How to use tanagR
@@ -22,7 +32,7 @@ The typical pipeline for using `tanagR` involves 3 steps:
 
 1. Visualize color palettes to choose the one that fits your needs
 2. Select a color palette
-3. Use the selected color palette to construct `base R`-style plots or `ggplot2`-style plots
+3. Use the selected color palette to make beautiful graphs
 
 ## Visualize available palettes
 
@@ -35,60 +45,81 @@ Load `tanagR` and list available palettes
 
 Visualize one of the palettes:
 
-
 	viz_palette("bangsia_edwardsi")
 
+or
+
+	visualize_palette("stilpnia_preciosa")
+	
+	
 ## Select and use a color palette
 
-To use with base R
+We have made options to use `tanagR` easily with base R and `ggplot2` syle graphs. This is an example using base R and a discrete palette
 
 	pal = tanagr_palette("bangsia_edwardsi")
 	data(iris)
 	plot(iris$Sepal.Width,
 		iris$Sepal.Length,
 		col = pal[as.numeric(iris$Species)],
-		pch = 19)
+		pch = 19,
+		cex = 2)
 
+This is an example using base R and a continuous palette
 
 	pal = tanagr_palette("dacnis_berlepschi", n = 100, discrete = FALSE)
 	image(volcano,
-			col = pal,
-			main = "Colors: Dacnis berlepschi")
+		col = pal,
+		main = "Colors: Dacnis berlepschi")
 
-To use with ggplot2
+You can use the palettes above with `ggplot2`, however we have made a couple of helper functions to integrate `tanagR` easily with `ggplot2`. Here is an example using a discrete palette
 
 	library(ggplot2)
 	ggplot(iris, 
 		aes(x = Sepal.Length, 
 		    y = Petal.Length, 
 		    color = Species)) + 
-	geom_point(alpha = 0.5, size  = 3) + 
+	geom_point(size  = 3) + 
 	geom_density2d() + 
-	theme_bw(base_size=12) + 
+	theme_bw(base_size = 12) + 
 	scale_color_tanagr(palette_name = "stilpnia_preciosa")
+
+This is an example using a continuous palette
 
 	ggplot(iris, 
 		aes(x = Sepal.Width, 
 		    y = Sepal.Length, 
 		    color = Petal.Width)) + 
-	geom_point(alpha = 0.6, size  = 4) +  
+	geom_point(size  = 4) +  
 	theme_bw(base_size=12) + 
 	scale_color_tanagr(palette_name = "chlorochrysa_nitidissima", 
 	                   discrete = FALSE)
 
-	ggplot(mpg, 
-		aes(manufacturer, 
-		    fill = manufacturer)) + 
-	geom_bar() + 
-	theme(axis.text.x = element_text(angle = 45, hjust = 1), 
-	      panel.background = element_blank()) + 
-	scale_fill_tanagr(palette = "stilpnia_preciosa", 
-	                  guide = "none")
+This is an example using a "filling" aesthetic with a discrete palette
 
+	ggplot(mpg, aes(fl, fill = fl)) +
+		geom_bar() +
+		theme(axis.text.x = element_text(hjust = 1), panel.background = element_blank()) + 
+		scale_fill_tanagr(palette = "stilpnia_preciosa", guide = "none")
+
+And this one using a continuous palette
+
+	library(gridExtra)
+	g = ggplot(faithfuld, aes(waiting, eruptions)) +
+		geom_raster(aes(fill = density)) +
+		theme_bw() +
+		theme(panel.grid=element_blank())
+
+	grid.arrange(
+		g + scale_fill_tanagr(palette = "cyanerpes_cyaneus", guide = "none", discrete  = FALSE),
+		g + scale_fill_tanagr(palette = "dacnis_berlepschi", guide = "none", discrete  = FALSE),
+		g + scale_fill_tanagr(palette = "ramphocelus_sanguinolentus", guide = "none", discrete  = FALSE),
+		g + scale_fill_tanagr(palette = "tangara_seledon", guide = "none", discrete  = FALSE),
+		ncol = 2, nrow = 2
+		)
 
 ## Issues
 
-Please use the [issue tracker](https://github.com/cdanielcadena/tanagR/issues) to file issues.
+Please use the [issue tracker](https://github.com/cdanielcadena/tanagR/issues) to file issues. Please, don't send us emails.
 
 ## Plans for the future
 
