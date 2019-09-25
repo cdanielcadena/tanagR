@@ -7,17 +7,33 @@
 scale_fill_tanagr(palette_name, discrete = TRUE, ...)
 }
 \arguments{
+\item{palette_name}{the name of the palette}
+
 \item{discrete}{whether to use a discrete or continuous color palette (boolean)}
 
 \item{...}{additional arguments to pass to scale_fill_gradientn}
-
-\item{palette}{the name of the palette}
 }
 \description{
 It generates a palette by linear interpolation for scale_fill
 }
 \examples{
 library(ggplot2)
-ggplot(mpg, aes(manufacturer, fill = manufacturer)) + geom_bar() + theme(axis.text.x = element_text(angle = 45, hjust = 1), panel.background = element_blank()) + scale_fill_tanagr(palette = "stilpnia_preciosa", guide = "none")
+ggplot(mpg, aes(fl, fill = fl)) +
+ geom_bar() +
+ theme(axis.text.x = element_text(hjust = 1), panel.background = element_blank()) +
+ scale_fill_tanagr(palette = "stilpnia_preciosa", guide = "none")
 
+library(gridExtra)
+g = ggplot(faithfuld, aes(waiting, eruptions)) +
+ geom_raster(aes(fill = density)) +
+  theme_bw() +
+  theme(panel.grid=element_blank())
+
+grid.arrange(
+   g + scale_fill_tanagr(palette = "cyanerpes_cyaneus", guide = "none", discrete  = FALSE),
+   g + scale_fill_tanagr(palette = "dacnis_berlepschi", guide = "none", discrete  = FALSE),
+   g + scale_fill_tanagr(palette = "ramphocelus_sanguinolentus", guide = "none", discrete  = FALSE),
+   g + scale_fill_tanagr(palette = "tangara_seledon", guide = "none", discrete  = FALSE),
+   ncol = 2, nrow = 2
+   )
 }
