@@ -54,7 +54,7 @@ or
 	
 ## Select and use a color palette
 
-We have made options to use `tanagR` easily with base R and `ggplot2` syle graphs. This is an example using base R and a discrete palette
+We made options to use `tanagR` easily with base R and `ggplot2` graphs. This is an example using base R and a discrete palette
 
 	pal = tanagr_palette("bangsia_edwardsi")
 	data(iris)
@@ -71,7 +71,7 @@ This is an example using base R and a continuous palette
 		col = pal,
 		main = "Colors: Dacnis berlepschi")
 
-You can use the palettes above with `ggplot2`, however we have made a couple of helper functions to integrate `tanagR` easily with `ggplot2`. Here is an example using a discrete palette
+You can use the palettes above with `ggplot2`, but we  made a couple of helper functions to integrate `tanagR` easily with `ggplot2`. Here is an example using a discrete palette
 
 	library(ggplot2)
 	ggplot(iris, 
