@@ -15,7 +15,7 @@ Sexual selection and natural selection have produced the most beautiful color pa
 
 	install.packages("devtools")
 	
-If you have problems installing `devtools` please visit the `devtools` [website](https://www.r-project.org/nosvn/pandoc/devtools.html) (you may need developer tools specific to your OS). We used `devtools v 2.2.0` to build `tanagR`.
+If you have problems installing `devtools` please visit the `devtools` website [here](https://www.r-project.org/nosvn/pandoc/devtools.html) or [here](https://devtools.r-lib.org). You may need to install developer tools specific to your OS. We used `devtools v 2.2.0` to build `tanagR`.
 
 Once you have installed `devtools` you can load it and install `tanagR`.
 	
