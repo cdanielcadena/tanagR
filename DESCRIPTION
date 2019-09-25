@@ -9,10 +9,15 @@ Authors@R: c(person("Daniel", "Cadena", role = c("aut"),
 Description: It provides color palettes inspired by the plumage of tanagers. 
              It provides palettes for base R as well as ggplot2, as discrete or 
              continous scales.
+Date: 2019-25-2019
 License: MIT + file LICENSE
+Depends:
+    R (>= 3.6)
 Imports: ggplot2,
          graphics,
-         grDevices
+         grDevices,
+         gridExtra,
+         magick
 Suggests: tidyverse        
 Encoding: UTF-8
 LazyData: true
