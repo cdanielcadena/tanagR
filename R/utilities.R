@@ -77,5 +77,5 @@ visualize_palette <- function(palette_name){
   old <- par(mar = c(1, 1, 1, 1))
   on.exit(par(old))
 
-  plot(pal, axes = F, ann = F)
+  plot(pal)
 }
