@@ -22,7 +22,8 @@ data(iris)
 plot(iris$Sepal.Width,
      iris$Sepal.Length,
      col = pal[as.numeric(iris$Species)],
-     pch = 19)
+     pch = 19,
+     cex = 2)
 
 pal = tanagr_palette("dacnis_berlepschi", n = 20, discrete = FALSE)
 data(volcano)
