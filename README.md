@@ -119,7 +119,7 @@ And this one using a continuous palette
 
 ## Issues
 
-Please use the [issue tracker](https://github.com/cdanielcadena/tanagR/issues) to file issues. Please, don't send us emails.
+Please use the [issue tracker](https://github.com/cdanielcadena/tanagR/issues) to file issues. Please do not send us emails.
 
 ## Plans for the future
 
