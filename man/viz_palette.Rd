@@ -2,7 +2,7 @@
 % Please edit documentation in R/utilities.R
 \name{viz_palette}
 \alias{viz_palette}
-\title{Vizualization of palettes}
+\title{Visualization of palettes}
 \usage{
 viz_palette(palette_name)
 }
