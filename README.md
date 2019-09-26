@@ -30,10 +30,10 @@ or
 
 `tanagR` depends on the following R libraries:
 
-	ggplot2,
-	graphics,
-	grDevices,
-	gridExtra,
+	ggplot2
+	graphics
+	grDevices
+	gridExtra
 	magick
 
 All these libraries will be installed with `tanagR` if not available on your system. Installation should go smoothly. If you have issues, please double check the requirements for those libraries (e.g., R version, your OS, etc). For LinuX or OSX users, `magick` may require installing other libraries; for further information on installing `magick` on Linux and OSX click [here](https://github.com/ropensci/magick).
