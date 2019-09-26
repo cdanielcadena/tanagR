@@ -59,7 +59,7 @@ Visualize one of the palettes:
 
 or
 
-	visualize_palette("stilpnia_preciosa")
+	viz_palette("stilpnia_preciosa")
 	
 ## Select and use a color palette
 
