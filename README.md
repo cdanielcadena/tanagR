@@ -53,7 +53,7 @@ Load `tanagR` and list available palettes
 	library(tanagR)
 	names(tanagr_palettes)
 
-To visualize the palettes you can use two different functions. You can use
+You can use two different functions to visualize the palettes. You can use
 
 	viz_palette("bangsia_edwardsi")
 
