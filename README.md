@@ -26,7 +26,7 @@ or
 
 	devtools::install_github("cdanielcadena/tanagR")
 
-When installing `tangr`, R will try to update `curl`. We have noticed some problems on MacOS using the version that requires compilation. We recommend to install the binary version instead.
+When installing `tanagr`, R will try to update `curl`. We have noticed some problems on MacOS using the version that requires compilation. We recommend to install the binary version of `curl` instead.
 
 ## Dependencies
 
