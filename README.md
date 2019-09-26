@@ -26,6 +26,18 @@ or
 
 	devtools::install_github("cdanielcadena/tanagR")
 
+## Dependencies
+
+`tanagR` depends on the following R libraries:
+
+	ggplot2,
+        graphics,
+        grDevices,
+        gridExtra,
+        magick
+
+All these libraries will be installed with `tanagR` if not available on your system. Installation should go smoothly. If you have issues, please double check the requirements for those libraries (e.g., R version, your OS, etc). For LinuX or OSX users, `magick` may require installing other libraries; for further information on installing `magick` on Linux and OSX click [here](https://github.com/ropensci/magick).
+
 ## How to use tanagR
 
 The typical pipeline for using `tanagR` involves 3 steps:
@@ -38,10 +50,8 @@ The typical pipeline for using `tanagR` involves 3 steps:
 
 Load `tanagR` and list available palettes
 
-
 	library(tanagR)
 	names(tanagr_palettes)
-
 
 Visualize one of the palettes:
 
@@ -50,7 +60,6 @@ Visualize one of the palettes:
 or
 
 	visualize_palette("stilpnia_preciosa")
-	
 	
 ## Select and use a color palette
 
