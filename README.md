@@ -53,13 +53,13 @@ Load `tanagR` and list available palettes
 	library(tanagR)
 	names(tanagr_palettes)
 
-Visualize one of the palettes:
+To visualize the palettes you can use two different functions. You can use
 
 	viz_palette("bangsia_edwardsi")
 
-or
+or you can use
 
-	viz_palette("stilpnia_preciosa")
+	visualize_palette("stilpnia_preciosa")
 	
 ## Select and use a color palette
 
