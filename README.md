@@ -15,7 +15,7 @@ Sexual selection and natural selection have produced the most beautiful color pa
 
 	install.packages("devtools")
 	
-If you have problems installing `devtools` please visit the `devtools` website [here](https://www.r-project.org/nosvn/pandoc/devtools.html) or [here](https://devtools.r-lib.org). You may need to install developer tools specific to your OS. We used `devtools v 2.2.0` to build `tanagR`.
+We strongly recommend to install or update to the latest version of `devtools`. If you have problems installing `devtools` please visit the `devtools` website [here](https://www.r-project.org/nosvn/pandoc/devtools.html) or [here](https://devtools.r-lib.org). You may need to install developer tools specific to your OS. We used `devtools v 2.2.0` to build `tanagR`.
 
 Once you have installed `devtools` you can load it and install `tanagR`.
 	
@@ -25,6 +25,8 @@ Once you have installed `devtools` you can load it and install `tanagR`.
 or
 
 	devtools::install_github("cdanielcadena/tanagR")
+
+When installing `tangr`, R will try to update `curl`. We have noticed some problems on MacOS using the version that requires compilation. We recommend to install the binary version instead.
 
 ## Dependencies
 
