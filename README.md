@@ -53,11 +53,11 @@ Load `tanagR` and list available palettes
 	library(tanagR)
 	names(tanagr_palettes)
 
-You can use two different functions to visualize the palettes. You can use
+You can use two different functions to visualize the palettes. To see only a color palette you can use
 
 	viz_palette("bangsia_edwardsi")
 
-or you can use
+To see both the color palette and a photo of the bird species on which it is based use
 
 	visualize_palette("stilpnia_preciosa")
 	
