@@ -1,4 +1,4 @@
-##Instrucciones para Seleccionar Códigos de Colores para Crear Paletas de Color en tanagR
+## Instrucciones para Seleccionar Códigos de Colores para Crear Paletas de Color en tanagR
 
 1. Entrar a la tabla de [datos](https://docs.google.com/spreadsheets/d/1tjD11_B6cfBj0_C34jOPYvn2qShAVe4wq3eqOVPoeZ0/edit?usp=sharing)
 
