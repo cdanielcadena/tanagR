@@ -1,0 +1,26 @@
+
+
+1. Entrar a la tabla de [datos](https://docs.google.com/spreadsheets/d/1tjD11_B6cfBj0_C34jOPYvn2qShAVe4wq3eqOVPoeZ0/edit?usp=sharing)
+
+Las columnas corresponden a:
+
+- nombres en inglés de las especies
+- eBird code: identificador de las páginas del CLO para cada especie, e.g. https://ebird.org/species/absfin1, https://ebird.org/species/azrtan1, etc.
+- Cornell Asset: código de una de las mejores fotos de cada especie en la Macaulay Library, e.g. https://macaulaylibrary.org/asset/204795741 
+- nombres científicos de las especies
+- observer: iniciales de la persona que hizo la selección de colores.
+- example photo: el número de catálogo en ML de la foto usada para escoger los colores. puede ser o no el mismo numero del asset (ver punto 2 abajo).
+- Color1 - Color6: códigos hex de los distintos parches de color de cada especie  (si hay especies con más de 6 colores se puede agregar una columna).
+
+2. Descargar una foto de buena calidad de la especie que van a agregar de la página de [Macaulay Library](https://www.macaulaylibrary.org/). 
+Pueden usar los mejores assets que estan en la tabla como guía, pero no necesariamente. Escojan la foto que mejor les parezca. Por lo general los machos son mas coloridos que las hembras, así que para este propósito en general mejor usar machos en especies con dimorfismo. A veces el mejor asset corresponde a fotos de hembras en especies en que los machos son más coloridos, por lo que es bueno mirar varias opciones antes de escoger el modelo final.
+ 
+3. Cargar la foto "modelo" en esta página web y escoger los colores teniendo en cuenta lo siguiente:
+
+- ampliar la ventana del navegador de forma que la foto se vea lo más grande posible
+- ubicar el cursor sobre un parche de color dado y hacer click en distintos puntos hasta que el color que muestra la ventana corresponda lo más posible con el color del ave.
+- copiar el código hex generado para el color escogido (incluyendo el #) y pegarlo en la tabla en google sheets
+- repetir para todos los parches de color distintos que vean en cada ave
+
+4. Agregar sus iniciales y el número de catálogo ML de la foto escogida como modelo a la tabla en google sheets y volver a 2.
+
