@@ -10,7 +10,7 @@ Las columnas corresponden a:
 - nombres científicos de las especies
 - observer: iniciales de la persona que hizo la selección de colores.
 - example photo: el número de catálogo en ML de la foto usada para escoger los colores. puede ser o no el mismo numero del asset (ver punto 2 abajo).
-- Color1 - Color6: códigos hex de los distintos parches de color de cada especie  (si hay especies con más de 6 colores se puede agregar una columna).
+- Color1 - Color6: códigos hex de los distintos parches de color de cada especie  (si hay especies con más de 6 colores se pueden agregar columnas).
 
 2. Descargar una foto de buena calidad de la especie que van a agregar de la página de [Macaulay Library](https://www.macaulaylibrary.org/). 
 Pueden usar los mejores assets que estan en la tabla como guía, pero no necesariamente. Escojan la foto que mejor les parezca. Por lo general los machos son mas coloridos que las hembras, así que para este propósito en general mejor usar machos en especies con dimorfismo. A veces el mejor asset corresponde a fotos de hembras en especies en que los machos son más coloridos, por lo que es bueno mirar varias opciones antes de escoger el modelo final. Los colores escogidos no tienen que ser solo de las plumas; en casos en que el pico, los ojos o las patas tienen colores distintos se deben incluir.
