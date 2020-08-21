@@ -12,11 +12,11 @@ Primero tenemos que escoger la mejor herramienta online para extraer los colores
 
 4. En la quinta columna, agregar el URL de la página que va a usar para extraer los colores, asegurándose que otra persona no haya ya usado esa misma herramienta, y agregar sus iniciales en la sexta columna.
 
-3. Para cada una de las ocho especies que están en la tabla, usar como base la foto correspondiente al "asset" de Macaulay Library indicado en cada caso como modelo. Por ejemplo, para *Stilpnia preciosa* el asset es 184010051. Para llegar a esta foto en la web, se usa la dirección https://macaulaylibrary.org/asset/184010051.
+5. Para cada una de las ocho especies que están en la tabla, usar como base la foto correspondiente al "asset" de Macaulay Library indicado en cada caso como modelo. Por ejemplo, para *Stilpnia preciosa* el asset es 184010051. Para llegar a esta foto en la web, se usa la dirección https://macaulaylibrary.org/asset/184010051.
 
-4. Seguir las instrucciones para extaer los colores de cada una de las fotos descritas en el punto 3 de la Etapa 2 del proceso descrita abajo y luego agregar los códigos de colores a la tabla.
+6. Seguir las instrucciones para extaer los colores de cada una de las fotos descritas en el punto 3 de la Etapa 2 del proceso descrita abajo y luego agregar los códigos de colores a la tabla.
 
-5. Repetir desde el paso 3 para las ocho especies.
+7. Repetir desde el paso 3 para las ocho especies.
 
 ## Etapa 2: Extracción de Códigos Hex de Fotos de todas las Tángaras
 
