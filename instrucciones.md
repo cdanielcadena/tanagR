@@ -14,7 +14,7 @@ Primero tenemos que escoger la mejor herramienta online para extraer los colores
 
 5. Para cada una de las ocho especies que están en la tabla, usar como base la foto correspondiente al "asset" de Macaulay Library indicado en cada caso como modelo. Por ejemplo, para *Stilpnia preciosa* el asset es 184010051. Para llegar a esta foto en la web, se usa la dirección https://macaulaylibrary.org/asset/184010051.
 
-6. Seguir las instrucciones para extaer los colores de cada una de las fotos descritas en el punto 3 de la Etapa 2 del proceso descrita abajo y luego agregar los códigos de colores a la tabla.
+6. Seguir las instrucciones para extraer los colores de cada una de las fotos descritas en el punto 3 de la Etapa 2 del proceso descrita abajo y luego agregar los códigos de colores a la tabla.
 
 7. Repetir desde el paso 3 para las ocho especies.
 
