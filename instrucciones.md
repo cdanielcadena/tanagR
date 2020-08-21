@@ -6,12 +6,17 @@ Primero tenemos que escoger la mejor herramienta online para extraer los colores
 
 1. Buscar en internet una página web que permita extraer códigos Hex de archivos de imágenes. Por ejemplo, si uno busca "extract hex code from image" en Google, aparecen algunas como [esta](https://html-color-codes.info/colors-from-image/) o esta [otra](https://www.ginifab.com/feeds/pms/color_picker_from_image.php). Escoger alguna página que no sea ninguna de esas dos, pues ya las probamos.
 
-2. Agregar el URL de la página que encontró a esta tabla, asegurándose que otra persona no haya ya usado esa misma herramienta, y agregar sus iniciales para que podamos saber quién fue responsable de tomar los datos.
+2. Entrar la pestaña "test" en este documento en [Google Sheets](https://docs.google.com/spreadsheets/d/1tjD11_B6cfBj0_C34jOPYvn2qShAVe4wq3eqOVPoeZ0/edit?usp=sharing). Ahi encontrarán una lista de ocho especies que vamos a usar como prueba.
 
-3. Para cada una de las cinco especies que están en la tabla, usar la foto correspondiente al "asset" de Macaulay Library indicado en cada caso como modelo.
+3. Insertar una fila debajo de la última entrada registrada para cada especie. En esa fila, copiar exactamente igual las primeras cuatro columnas.
 
-4. Seguir las instrucciones para extaer los colores de cada una de las fotos descritas en el punto 3 de la Etapa 2 del proceso descrita abajo y agregar los códigos de colores.
+4. En la quinta columna, agregar el URL de la página que va a usar para extraer los colores, asegurándose que otra persona no haya ya usado esa misma herramienta, y agregar sus iniciales en la sexta columna.
 
+3. Para cada una de las ocho especies que están en la tabla, usar como base la foto correspondiente al "asset" de Macaulay Library indicado en cada caso como modelo. Por ejemplo,para Stilpnia preciosa, el asset es 184010051. Para llegar a esta foto en la web, se usa la dirección https://macaulaylibrary.org/asset/184010051.
+
+4. Seguir las instrucciones para extaer los colores de cada una de las fotos descritas en el punto 3 de la Etapa 2 del proceso descrita abajo y luego agregar los códigos de colores a la tabla.
+
+5. Repetir desde el paso 3 para las ocho especies.
 
 ## Etapa 2: Extracción de Códigos Hex de Fotos de todas las Tángaras
 
