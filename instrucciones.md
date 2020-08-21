@@ -18,7 +18,7 @@ Primero tenemos que escoger la mejor herramienta online para extraer los colores
 
 7. Repetir desde el paso 3 para las ocho especies.
 
-8. Esperar a que decidamos cuál será la herramienta escogida para tomar los datos de las fotos de todas especies.
+8. Esperar a que decidamos cuál será la herramienta escogida para tomar los datos de las fotos de todas las especies.
 
 ## Etapa 2: Extracción de Códigos Hex de Fotos de todas las Tángaras
 
