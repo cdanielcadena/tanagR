@@ -18,11 +18,13 @@ Primero tenemos que escoger la mejor herramienta online para extraer los colores
 
 7. Repetir desde el paso 3 para las ocho especies.
 
+8. Esperar a que decidamos cuál será la herramienta escogida para tomar los datos de las fotos de todas especies.
+
 ## Etapa 2: Extracción de Códigos Hex de Fotos de todas las Tángaras
 
 Una vez escogida la herramienta, estamos listos para extraer los colores de fotos de todas las especies de Thraupidae, que luego usaremos para generar paletas de color basadas en los colores de cada una para implementarlas en tanagR. Los pasos a seguir son:
 
-1. Entrar a la tabla de [datos](https://docs.google.com/spreadsheets/d/1tjD11_B6cfBj0_C34jOPYvn2qShAVe4wq3eqOVPoeZ0/edit?usp=sharing)
+1. Entrar a al acrchivo de [Google Sheets](https://docs.google.com/spreadsheets/d/1tjD11_B6cfBj0_C34jOPYvn2qShAVe4wq3eqOVPoeZ0/edit?usp=sharing) y pasar a la pestaña "tanagRcolors".
 
 Las columnas corresponden a:
 
