@@ -1,6 +1,6 @@
-## Instrucciones para Seleccionar Códigos de Colores para Crear Paletas de Color en tanagR
+# Instrucciones para Seleccionar Códigos de Colores para Crear Paletas de Color en tanagR
 
-# Etapa 1: Selección de Herramienta para Extraer Códigos Hex de Fotos
+## Etapa 1: Selección de Herramienta para Extraer Códigos Hex de Fotos
 
 Primero tenemos que escoger la mejor herramienta online para extraer los colores de fotos, de forma que las paletas se parezcan lo más posible a los colores de las aves. Para esto, la idea es que probemos varios sitios web con las mismas fotos y escojamos la que reproduzca los colores más fielmente. Cada uno por favor haga lo siguiente:
 
@@ -13,7 +13,7 @@ Primero tenemos que escoger la mejor herramienta online para extraer los colores
 4. Seguir las instrucciones para extaer los colores de cada una de las fotos descritas en el punto 3 de la Etapa 2 del proceso descrita abajo.
 
 
-# Etapa 2: Extracción de Códigos Hex de Fotos de todas las Tángaras
+## Etapa 2: Extracción de Códigos Hex de Fotos de todas las Tángaras
 
 Una vez escogida la herramienta, estamos listos para extraer los colores de fotos de todas las especies de Thraupidae, que luego usaremos para generar paletas de color basadas en los colores de cada una para implementarlas en tanagR. Los pasos a seguir son:
 
