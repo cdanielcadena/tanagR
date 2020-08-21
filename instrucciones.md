@@ -4,13 +4,13 @@
 
 Primero tenemos que escoger la mejor herramienta online para extraer los colores de fotos, de forma que las paletas se parezcan lo más posible a los colores de las aves. Para esto, la idea es que probemos varios sitios web con las mismas fotos y escojamos la que reproduzca los colores más fielmente. Cada uno por favor haga lo siguiente:
 
-1. Buscar en internet una página web que permita extraer códigos Hex de fotos.
+1. Buscar en internet una página web que permita extraer códigos Hex de archivos de imágenes. Por ejemplo, si uno busca "extract hex code from image" en Google, aparecen algunas como [esta](https://html-color-codes.info/colors-from-image/) o [esta](https://www.ginifab.com/feeds/pms/color_picker_from_image.php). Escoger alguna página que no sea ninguna de esas dos, pues ya las probamos.
 
 2. Agregar el URL de la página que encontró a esta tabla, asegurándose que otra persona no haya ya usado esa misma herramienta, y agregar sus iniciales para que podamos saber quién fue responsable de tomar los datos.
 
-3. Para cada una de las cinco especies que están en la tabla, usar la foto correspondiente al "asset" de Macaulay Library indicado en cada caso.
+3. Para cada una de las cinco especies que están en la tabla, usar la foto correspondiente al "asset" de Macaulay Library indicado en cada caso como modelo.
 
-4. Seguir las instrucciones para extaer los colores de cada una de las fotos descritas en el punto 3 de la Etapa 2 del proceso descrita abajo.
+4. Seguir las instrucciones para extaer los colores de cada una de las fotos descritas en el punto 3 de la Etapa 2 del proceso descrita abajo y agregar los códigos de colores.
 
 
 ## Etapa 2: Extracción de Códigos Hex de Fotos de todas las Tángaras
